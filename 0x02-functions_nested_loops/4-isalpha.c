@@ -1,21 +1,24 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - Check holberton
- * Description: function uses _putchar function to print
- * alphabet in lowercase 10 times
- * Return: Nothing.
+ * _isalpha - Check Holberton
+ * @c: An input character
+ * Description: function returns 1 if the character is a
+ * letter, lowercase or uppercase.
+ * Return: 1 or 0 in otherwise.
  */
-
-void print_alphabet_x10(void)
+int _isalpha(int c)
 {
-	char i;
-	int j;
+	char lower, upper;
+	int isletter = 0;
 
-	for (j = 0; j < 10; j++)
+	for (lower = 'a'; lower <= 'z'; lower++)
 	{
-		for (i = 'a'; i <= 'z'; i++)
-			_putchar(i);
-		_putchar('\n');
+		for (upper = 'A'; upper <= 'Z'; upper++)
+		{
+			if (c == lower || c == upper)
+				isletter = 1;
+		}
 	}
+	return (isletter);
 }
