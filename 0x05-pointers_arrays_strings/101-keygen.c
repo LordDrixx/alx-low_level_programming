@@ -1,4 +1,4 @@
-#include <time.h>
+#include <stdio.h>
 /**
  * main - generates keygen.
  * Return: 0 Always.
